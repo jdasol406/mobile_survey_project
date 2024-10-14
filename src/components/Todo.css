@@ -1,0 +1,86 @@
+#todo-list {
+  border: 1px solid white;
+  width: 400px;
+  height: 400px; 
+  align-items:center;
+  background-color: gray;
+}
+
+#write-div {
+  width: 400px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#list {
+  border: 1px solid white;
+  width: 350px;
+  height: 330px; 
+  margin: auto;
+  background-color: white;
+  color: black;
+}
+
+#list-input {
+  width: 236px;
+  height: 23px;
+  border-radius: 15px;
+  border: 0px;
+}
+
+#regiter-btn {
+  width: 50px;
+  height: 25px;
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+ul {
+  margin-top: 9px;
+}
+
+li {
+  text-align: start;
+  position: relative;
+  padding-right: 50px; 
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#delete-btn {
+  width: 37px;
+  height: 18px;
+  font-size: 8px;
+  position: absolute;
+  right: 0;
+  margin-right: 17px;
+}
+
+#update-btn2 {
+  width: 37px;
+  height: 18px;
+  font-size: 8px;
+  position: absolute;
+}
+
+#update-btn {
+  display: none;
+  width: 50px;
+  height: 25px;
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+#back-btn {
+  width: 36px;
+  height: 17px;
+  font-size: 11px;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+}
+
