@@ -1,12 +1,12 @@
 import './Todo.css';
 
-const BackButton = (props) => {
+const BackButton = ({setInput, setCurrentIndex, updateBtnFunk}) => {
   const backBtn = () => {
     
-    props.setInput(''); 
-    props.setCurrentIndex(null); 
+    setInput(''); 
+    setCurrentIndex(null); 
 
-    props.updateBtnFunk("none");
+    updateBtnFunk("none");
   }
 
   return (
