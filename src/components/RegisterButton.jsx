@@ -1,9 +1,9 @@
 import './Todo.css';
 
 const RegisterButton = (props) => {
-  console.log(props);
-  const addTodo = (input, todos, setInput, setTodos, updateBtnFunk) => {
-    // console.log(props.input);
+  
+  const addTodo = () => {
+    
     if (props.input.trim() !== '') {
       props.setTodos([...props.todos, props.input]);
       props.setInput('');

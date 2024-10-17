@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import './Todo.css';
 import RegisterButton from './RegisterButton';
+import BackButton from './BackButton';
 
 function Todo() {
   const [input, setInput] = useState('');
@@ -54,14 +55,6 @@ function Todo() {
     updateBtnFunk("none");
   };
 
-  const backBtn = () => {
-    
-    setInput(''); 
-    setCurrentIndex(null); 
-
-    updateBtnFunk("none");
-  }
-
   return (
     <>
       <div>
@@ -70,7 +63,6 @@ function Todo() {
       <div id='todo-list'>
         <div id='write-div'>
           <input value={input} onChange={inputChange} id='list-input' />
-          {/* <button id='regiter-btn' onClick={addTodo}>등록</button> */}
           <RegisterButton input={input} setInput={setInput} todos={todos} setTodos={setTodos} updateBtnFunk={updateBtnFunk}/>
           <button id='update-btn' onClick={updateTodo} ref={updateButtonRef}>수정</button> {/* 초기 상태를 none으로 설정 */}
         </div>
@@ -84,7 +76,7 @@ function Todo() {
             ))}
           </ul>
         </div>
-        <button id='back-btn' onClick={backBtn}> 🔙 </button>
+        <BackButton setInput={setInput} setCurrentIndex={setCurrentIndex} updateBtnFunk={updateBtnFunk}/>
       </div>
     </>
   );
