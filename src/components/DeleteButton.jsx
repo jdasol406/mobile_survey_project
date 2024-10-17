@@ -1,12 +1,13 @@
 import './Todo.css';
 
-const DeleteButton = ({index, todos, setTodos, updateBtnFunk}) => {
+const DeleteButton = ({index, todos, setInput, setTodos, updateBtnFunk}) => {
   const deleteTodo = (index, e) => {
     e.stopPropagation();
 
     const newTodos = todos.filter((_, todoIndex) => todoIndex !== index);
     setTodos(newTodos);
 
+    setInput(''); 
     updateBtnFunk("none");
   };
 

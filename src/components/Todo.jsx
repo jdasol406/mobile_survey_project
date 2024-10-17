@@ -47,7 +47,7 @@ function Todo() {
             {todos.map((todo, index) => (
               <li data-index={index} onClick={updateFunk} key={index}>
                 {todo}
-                <DeleteButton index={index} todos={todos} setTodos={setTodos} updateBtnFunk={updateBtnFunk}/>
+                <DeleteButton index={index} todos={todos} setInput={setInput} setTodos={setTodos} updateBtnFunk={updateBtnFunk}/>
               </li>
             ))}
           </ul>
