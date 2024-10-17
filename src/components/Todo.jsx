@@ -11,7 +11,6 @@ function Todo() {
   const [todos, setTodos] = useState([]);
   const updateButtonRef = useRef(null); 
   const [currentIndex, setCurrentIndex] = useState();
-  
 
   const updateBtnFunk = (displayStyle) => {
     if (updateButtonRef.current) {
