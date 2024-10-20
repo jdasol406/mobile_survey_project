@@ -73,7 +73,9 @@ function Todolist() {
   return (
     <>
       <div>
-        <h1>Todo List</h1>
+        <h1 className="text-3xl font-bold underline">
+          Todo List
+        </h1>
       </div>
       <div id='todo-list'>
         <div id='write-div'>
