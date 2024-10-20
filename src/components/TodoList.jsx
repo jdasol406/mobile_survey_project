@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import './Todo.css';
+import Write from './Write';
 
 function Todolist() {
   const [input, setInput] = useState('');
@@ -60,6 +61,7 @@ function Todolist() {
     setTodos(newTodos);
 
     updateBtnFunk("none");
+    setInput(''); 
   };
 
   const backBtn = () => {
@@ -78,14 +80,14 @@ function Todolist() {
         <div id='write-div'>
           <input value={input} onChange={inputChange} id='list-input' />
           <button id='regiter-btn' onClick={addTodo}>등록</button>
-          <button id='update-btn' onClick={updateTodo} ref={updateButtonRef}>수정</button> {/* 초기 상태를 none으로 설정 */}
+          <button id='update-btn' onClick={updateTodo} ref={updateButtonRef}>수정</button>
         </div>
         <div id='list'>
           <ul>
             {todos.map((todo, index) => (
               <li data-index={index} onClick={updateFunk} key={index}>
                 {todo}
-                <button id='delete-btn' onClick={(e) => deleteTodo(index, e)}>삭제</button> {/* 이벤트 전파 막기 */}
+                <button id='delete-btn' onClick={(e) => deleteTodo(index, e)}>삭제</button>
               </li>
             ))}
           </ul>
