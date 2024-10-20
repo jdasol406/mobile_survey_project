@@ -1,13 +1,13 @@
-import './Todo.css';
 import Todolist from './TodoList';
 import Tailwind from './Tailwind';
+import './Todo.css';
 
 function Todo() {
   
   return (
     <>
-      {/* <Todolist /> */}
       <Tailwind />
+      <Todolist />
     </>
   );
 }

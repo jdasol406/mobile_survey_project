@@ -72,11 +72,8 @@ function Todolist() {
 
   return (
     <>
-      <div>
-        <h1 className="text-3xl font-bold underline">
-          Todo List
-        </h1>
-      </div>
+    <div id='wrap'>
+      <h1 id='h1-todo'>Todo List</h1>
       <div id='todo-list'>
         <div id='write-div'>
           <input value={input} onChange={inputChange} id='list-input' />
@@ -95,6 +92,7 @@ function Todolist() {
         </div>
         <button id='back-btn' onClick={backBtn}> 🔙 </button>
       </div>
+    </div>
     </>
   );
 }

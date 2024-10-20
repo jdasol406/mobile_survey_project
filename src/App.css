@@ -1,8 +1,11 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  /* 20241021 custom start*/
+  /* padding: 2rem; */ /* 원래 있던거*/
+  max-width: 1920px;
+  height: 1080px;
+  background-color: #1E2937;
 }
 
 .logo {

@@ -1,9 +1,25 @@
+#wrap {
+  background-color: #1E2937;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+#h1-todo {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
 #todo-list {
-  border: 1px solid white;
   width: 400px;
   height: 400px; 
   align-items:center;
   background-color: gray;
+  border-radius: 8%;
 }
 
 #write-div {
@@ -21,6 +37,8 @@
   margin: auto;
   background-color: white;
   color: black;
+  background-color: #e6e6e6;
+  border-radius: 8%;
 }
 
 #list-input {
@@ -35,6 +53,8 @@
   height: 25px;
   font-size: 11px;
   margin-left: 5px;
+  background-color: #e6e6e6;
+  border-radius: 8px;
 }
 
 ul {
@@ -47,15 +67,21 @@ li {
   padding-right: 50px; 
   font-size: 15px;
   margin-bottom: 10px;
+  width: 340px;
+  margin-left: 13px;
+  margin-top: 15px;
 }
 
 #delete-btn {
-  width: 37px;
+  width: 34px;
   height: 18px;
   font-size: 8px;
   position: absolute;
   right: 0;
   margin-right: 17px;
+  background-color: gray;
+  border-radius: 8px;
+  color: white;
 }
 
 #update-btn2 {
@@ -63,6 +89,7 @@ li {
   height: 18px;
   font-size: 8px;
   position: absolute;
+  border-radius: 8px;
 }
 
 #update-btn {
@@ -71,16 +98,19 @@ li {
   height: 25px;
   font-size: 11px;
   margin-left: 5px;
+  border-radius: 8px;
+  background-color: #e6e6e6;
 }
 
 #back-btn {
-  width: 36px;
+  width: 25px;
   height: 17px;
   font-size: 11px;
-  margin: 4px;
+  margin: 1px 11px 5px 15px;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #e6e6e6;
   justify-content: center;
+  border-radius: 8px;
 }
 
