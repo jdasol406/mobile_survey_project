@@ -12,9 +12,10 @@ function UseEffect() {
   }, []);
 
   console.log('react console');
+  
   return (
     <>
-      <div>
+      <div style={{color:"white"}}>
         {count}
         <div>
           <button onClick={btnClick}>+</button>
