@@ -9,10 +9,6 @@ function UseEffect() {
   
   useEffect(() => {
     console.log('react useEffect');
-
-    return (
-      
-    )
   }, []);
 
   console.log('react console');

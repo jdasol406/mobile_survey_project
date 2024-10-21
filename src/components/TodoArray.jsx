@@ -1,12 +1,10 @@
 import { useState } from 'react';
+import TodoUpdate from './TodoUpdate';
 
 const TodoArray = ({input, setInput, todos, setTodos}) => {
   const [input2, setInput2] = useState('');
   const [currentIndex, setCurrentIndex] = useState();
 
-  const inputChange2 = (e) => {
-    setInput2(e.target.value);
-  };
 
   const updateFunk = (e) => {
     const trimmedText = e.currentTarget.textContent.trim();
@@ -16,18 +14,6 @@ const TodoArray = ({input, setInput, todos, setTodos}) => {
     
     const todoIndex = e.currentTarget.dataset.index;
     setCurrentIndex(todoIndex);
-  };
-
-  const updateTodo = () => {
-    if (currentIndex !== null) {
-      
-      const newTodos = [...todos];
-      newTodos[currentIndex] = input2
-      setTodos(newTodos); 
-
-      setInput2(''); 
-      setCurrentIndex(null); 
-    }
   };
 
   const deleteTodo = (index, e) => {
@@ -52,10 +38,8 @@ const TodoArray = ({input, setInput, todos, setTodos}) => {
             ))}
           </ul>
         </div>
-
         <div>
-          <input value={input2} onChange={inputChange2} id='update-input'/>
-          <button id='update-btn' onClick={updateTodo}>수정</button>
+          <TodoUpdate todos={todos} setTodos={setTodos} input2={input2} setInput2={setInput2} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
         </div>
       </div>
     </>
