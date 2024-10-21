@@ -1,16 +1,13 @@
 import { useState, useRef } from 'react';
 import './Todo.css';
-import Write from './Write';
+import Input from './input';
+import Button from './Button';
 
 function Todolist() {
   const [input, setInput] = useState('');
   const [todos, setTodos] = useState([]);
   const updateButtonRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState();
-
-  const inputChange = (e) => {
-    setInput(e.target.value);
-  };
 
   const updateBtnFunk = (displayStyle) => {
     if (updateButtonRef.current) {
@@ -23,7 +20,6 @@ function Todolist() {
       setTodos([...todos, input]);
       setInput('');
     }
-
     updateBtnFunk("none");
   };
 
@@ -78,8 +74,10 @@ function Todolist() {
       <h1 id='h1-todo'>Todo List</h1>
       <div id='todo-list'>
         <div id='write-div'>
-          <input value={input} onChange={inputChange} id='list-input' />
-          <button id='regiter-btn' onClick={addTodo}>등록</button>
+          {/* <input value={input} onChange={inputChange} id='list-input' /> */}
+          <Input id='list-input' input={input} setInput={setInput} />
+          {/* <button id='regiter-btn' onClick={addTodo}>등록</button> */}
+          <Button onClick={addTodo} text="등록"/>
           <button id='update-btn' onClick={updateTodo} ref={updateButtonRef}>수정</button>
         </div>
         <div id='list'>
@@ -92,7 +90,8 @@ function Todolist() {
             ))}
           </ul>
         </div>
-        <button id='back-btn' onClick={backBtn}> 🔙 </button>
+        {/* <button id='back-btn' onClick={backBtn}> 🔙 </button> */}
+        <Button onClick={backBtn} text="🔙"/>
       </div>
     </div>
     </>
