@@ -1,13 +1,13 @@
 import './App.css'
-// import Todo from './components/Todo'
-import UseEffect from './components/UseEffect'
+import Todo from './components/Todo'
+// import UseEffect from './components/UseEffect'
 
 function App() {
 
   return (
     <>
-      {/* <Todo /> */}
-      <UseEffect />
+      <Todo />
+      {/* <UseEffect /> */}
     </>
   )
 }
