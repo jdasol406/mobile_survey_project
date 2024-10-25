@@ -1,14 +1,17 @@
 #root {
   margin: 0 auto;
-  text-align: center;
-  /* 20241021 custom start*/
-  /* padding: 2rem; */ /* 원래 있던거*/
+  /* text-align: center; */
+  /* padding: 2rem; */ 
   max-width: 1920px;
   height: 1080px;
-  background-color: #1E2937;
+  background-color: white;
 }
 
-.logo {
+body {
+  margin: 0;
+}
+
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -42,4 +45,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */

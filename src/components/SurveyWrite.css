@@ -1,0 +1,55 @@
+#survey-write-contents {
+  width: 100%; /* 부모 요소가 전체 너비를 차지하도록 */
+  max-width: 853px; /* 필요한 경우 최대 너비 설정 */
+  padding: 0 15px; /* 양쪽 여백 추가 */
+  box-sizing: border-box; /* 패딩 포함 너비 계산 */
+}
+
+#write-title {
+  width: 100%;
+  height: auto;
+  margin: 30px 0 40px 0;
+}
+
+#write-title p {
+  margin-bottom: 5px; 
+}
+
+#write-title input {
+  width: 100%; /* 부모 요소를 기준으로 100% */
+  height: 40px; /* 적절한 높이 설정 */
+  padding: 8px; /* 입력 필드 안쪽 여백 */
+  box-sizing: border-box; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#write-date {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+#write-date p {
+  margin-bottom: 5px; 
+}
+
+#date-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#write-date input {
+  width: 45%; /* 부모 요소를 기준으로 100% */
+  height: 40px; /* 적절한 높이 설정 */
+  padding: 8px; /* 입력 필드 안쪽 여백 */
+  box-sizing: border-box; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+#add-option {
+  text-align: center;
+}
