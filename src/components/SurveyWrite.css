@@ -1,8 +1,17 @@
 #survey-write-contents {
-  width: 100%; /* 부모 요소가 전체 너비를 차지하도록 */
-  max-width: 853px; /* 필요한 경우 최대 너비 설정 */
-  padding: 0 15px; /* 양쪽 여백 추가 */
-  box-sizing: border-box; /* 패딩 포함 너비 계산 */
+  width: 100%; 
+  max-width: 853px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#survey-details-contents {
+  width: 100%; 
+  max-width: 853px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 #write-title {
@@ -16,9 +25,9 @@
 }
 
 #write-title input {
-  width: 100%; /* 부모 요소를 기준으로 100% */
-  height: 40px; /* 적절한 높이 설정 */
-  padding: 8px; /* 입력 필드 안쪽 여백 */
+  width: 100%;
+  height: 40px;
+  padding: 8px;
   box-sizing: border-box; 
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -49,7 +58,105 @@
   border-radius: 4px;
 }
 
+#survey-question-wrap {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+  box-sizing: border-box; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#survey-select {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#survey-write {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  box-sizing: border-box; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#survey-select select {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  box-sizing: border-box; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
 #add-option {
   text-align: center;
+  margin: 10px;
+}
+
+#necessary-onoff {
+  font-size: 13px;
+}
+
+#input-question{
+  display: flex; 
+  flex-direction: column;
+  margin: 8px 0;
+}
+
+#question-radio {
+  display: flex;
+}
+
+#radio {
+  width: 10%;
+}
+
+#radio-input {
+  width: 90%;
+  height: 20px;
+  text-align: start;
+  margin: 1% 2% 1% 0;
+}
+
+#survey-select-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.5px solid #bcbcbc;
+  border-bottom: 0.5px solid #bcbcbc;
+  background-color: #efefef;
+}
+
+#plus{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;;
+}
+
+#register-btn-back {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: none;
+}
+
+#register-btn {
+  width: 90%;
+  padding: 10px 20px;
+  background-color: #A6A6A6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1000;
 }
