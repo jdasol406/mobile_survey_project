@@ -17,7 +17,7 @@
 #write-title {
   width: 100%;
   height: auto;
-  margin: 30px 0 40px 0;
+  margin: 30px 0 30px 0;
 }
 
 #write-title p {
@@ -36,7 +36,7 @@
 #write-date {
   width: 100%;
   height: auto;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 #write-date p {
@@ -61,7 +61,7 @@
 #survey-question-wrap {
   width: 100%;
   height: auto;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   box-sizing: border-box; 
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -96,10 +96,6 @@
   margin: 10px;
 }
 
-#necessary-onoff {
-  font-size: 13px;
-}
-
 #input-question{
   display: flex; 
   flex-direction: column;
@@ -130,6 +126,13 @@
   background-color: #efefef;
 }
 
+#survey-select-footer > div {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 #plus{
   display: flex;
   justify-content: center;
@@ -159,4 +162,55 @@
   cursor: pointer;
   font-size: 16px;
   z-index: 1000;
+}
+
+#necessary-onoff {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+#switch {
+  display: flex;
+  margin: 6px 10px 4px 0px;
+  border: 0.5px solid #A6A6A6;
+  text-align: center;
+}
+
+#switch-on, #switch-off {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#switch-on.active {
+  background-color: #A6A6A6;
+  color: white;
+}
+
+#switch-off.active {
+  background-color: #A6A6A6;
+  color: white;
+}
+
+#switch-on:not(.active) {
+  background-color: #efefef;
+  color: #efefef;
+}
+
+#switch-off:not(.active) {
+  background-color: #efefef;
+  color: #efefef;
+}
+
+#switch-on-detail {
+  background-color: #A6A6A6;
+  color: white;
+}
+
+#switch-off-detail {
+  background-color: #efefef;
+  color: #efefef;
 }

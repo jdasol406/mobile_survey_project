@@ -6,11 +6,11 @@ import plusBtn from "../assets/plusBtn.png";
 import { useNavigate } from 'react-router-dom';
 
 const SurveyWrite = () => {
-  const [questions, setQuestions] = useState([{ id: 1, title: '', options: [] }]); // 초기값 추가
+  const [questions, setQuestions] = useState([{ id: 1, title: '', options: [] }]);
   const [title, setTitle] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-  const navigate = useNavigate(); // useNavigate 훅을 사용하여 페이지 이동
+  const navigate = useNavigate();
 
   const surveyAdd = () => {
     setQuestions([...questions, { id: questions.length + 1, title: '', options: [] }]);
@@ -21,35 +21,43 @@ const SurveyWrite = () => {
       title,
       startDate,
       endDate,
-      questions: questions.map(q => ({ title: q.title, options: q.options })),
+      questions: questions.map(q => ({ title: q.title, options: q.options, type: q.type })),
     };
   
-    // localStorage에서 데이터 가져오기
     const storedDataString = localStorage.getItem('surveyData');
     let storedData = [];
   
-    // storedData가 null이 아니고 JSON 파싱이 가능하면 배열로 변환
     if (storedDataString) {
       try {
         storedData = JSON.parse(storedDataString);
         if (!Array.isArray(storedData)) {
-          console.error("storedData가 배열이 아닙니다:", storedData); // 디버깅: storedData 출력
-          storedData = []; // 배열이 아니면 빈 배열로 초기화
+          console.error("storedData가 배열이 아닙니다:", storedData);
+          storedData = []; 
         }
       } catch (error) {
-        console.error("JSON 파싱 오류:", error); // 디버깅: JSON 파싱 오류
-        storedData = []; // JSON 파싱에 실패하면 빈 배열로 초기화
+        console.error("JSON 파싱 오류:", error);
+        storedData = [];
       }
     }
   
-    // 새로운 데이터 저장
     const updatedData = [...storedData, surveyData];
-  
-    // 로컬스토리지에 업데이트된 데이터 저장
+
     localStorage.setItem('surveyData', JSON.stringify(updatedData));
   
-    // 페이지 이동
     navigate('/');
+
+    console.log(localStorage);
+  };
+
+  const updateQuestion = (index, title, options, type ) => {
+    const updatedQuestions = [...questions];
+    updatedQuestions[index] = { ...updatedQuestions[index], title, options, type };
+    setQuestions(updatedQuestions);
+  };
+
+  const deleteQuestion = (index) => {
+    const updatedQuestions = questions.filter((_, i) => i !== index);
+    setQuestions(updatedQuestions);
   };
 
   return (
@@ -77,15 +85,12 @@ const SurveyWrite = () => {
             key={index} 
             question={question} 
             index={index} 
-            updateQuestion={(index, title, options) => {
-              const updatedQuestions = [...questions];
-              updatedQuestions[index] = { ...updatedQuestions[index], title, options };
-              setQuestions(updatedQuestions);
-            }} // 질문 업데이트 함수
+            updateQuestion={updateQuestion}
+            deleteQuestion={deleteQuestion}
           />
         ))}
-        <div id="plus" onClick={surveyAdd} style={{ cursor: "pointer" }}>
-          <img src={plusBtn} alt="plus button" />
+        <div id="plus" >
+          <img src={plusBtn} onClick={surveyAdd} alt="plus button" />
         </div>
         <div id="register-btn-back">
           <button id="register-btn" onClick={handleRegister}>등록하기</button>

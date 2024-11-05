@@ -1,4 +1,3 @@
-// ConfirmPopup.js
 import './ConfirmPopup.css';
 
 function ConfirmPopup({ onConfirm, onCancel, message }) {

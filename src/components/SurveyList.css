@@ -21,3 +21,21 @@
 #empty-list {
   text-align: center;
 }
+
+#total-contents {
+  padding: 8px 10px;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #A0A0A0;
+}
+
+#go {
+  width: 16px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+}
+
+#list-info {
+  width: 75%;
+}

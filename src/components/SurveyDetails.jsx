@@ -4,7 +4,7 @@ import './SurveyWrite.css'; // SurveyWrite의 스타일을 사용
 
 const SurveyDetails = () => {
   const location = useLocation();
-  const { survey } = location.state; // 전달받은 설문조사 데이터
+  const { survey } = location.state;
 
   return (
     <div id="survey-details-wrap">
@@ -55,7 +55,10 @@ const SurveyDetails = () => {
               <div id='survey-select-footer'>
                 <div id='necessary-onoff'>
                   필수항목 &nbsp;
-                  <span>{question.isNecessary ? "on" : "off"}</span>
+                  <div id='switch'>
+                    <div id="switch-on-detail"> on </div>
+                    <div id="switch-off-detail"> off </div>
+                  </div>
                 </div>
               </div>
             </div>
