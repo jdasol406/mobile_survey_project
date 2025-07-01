@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './SurveyList.css';
 
 function SurveyList() {
+  // test
   const navigate = useNavigate();
   const [surveys, setSurveys] = useState([]);
 
