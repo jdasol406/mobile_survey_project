@@ -17,6 +17,8 @@ function SurveyList() {
     }
   }, []);
 
+  // husky testttt
+
   const handleSurveyClick = (survey) => {
     navigate('/SurveyDetails', { state: { survey } });
   };
