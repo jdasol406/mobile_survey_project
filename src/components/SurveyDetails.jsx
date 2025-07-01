@@ -11,7 +11,7 @@ const SurveyDetails = () => {
       <SurveyHeader text={"설문조사 상세"} Button={""} />
       <div id="survey-details-contents">
         <div id="write-title">
-          {/* husky test2 */}
+          {/* husky test3 */}
           <p>설문조사 제목</p>
           <input type="text" value={survey.title} readOnly />
         </div>
